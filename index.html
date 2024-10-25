@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayan Ghosh's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+            <h1>Sayan Ghosh</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#contact">Get in Touch</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <p>Hi, I'm Sayan Ghosh, a passionate B.Tech student currently pursuing my degree at IEM Newtown. I have a strong foundation in web development and various technical skills.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Educational Background</h2>
+            <ul>
+                <li>10th Grade, Asansol Ramakrishna Mission</li>
+                <li>12th Grade, Ushagram Boys' High School</li>
+                <li>B.Tech, IEM Newtown (Currently Pursuing)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <p>Currently, I am engaged in learning web development and have completed various courses in HTML, CSS, and JavaScript.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="C:\Users\sayan\OneDrive\Desktop\portfolio\db.jpg" alt="Project 1">
+                    <h3>SMART DUSTBIN </h3>
+                    <p>A dustbin with arduino.</p>
+                    <a href="#" class="C:\Users\sayan\OneDrive\Desktop\portfolio\db.jpg">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="C:\Users\sayan\OneDrive\Desktop\portfolio\LED.jpg" alt="Project 2">
+                    <h3>LED CLOCK</h3>
+                    <p>A Led Clock Using arduino.</p>
+                    <a href="#" class="C:\Users\sayan\OneDrive\Desktop\portfolio\LED.jpg">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="C:\Users\sayan\OneDrive\Desktop\portfolio\clap.jpg" alt="Project 3">
+                    <h3>CLAP LIGHT</h3>
+                    <p>A Clap Light using arduino.</p>
+                    <a href="#" class="C:\Users\sayan\OneDrive\Desktop\portfolio\clap.jpg">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses">
+        <div class="container">
+            <h2>Courses Completed</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript Certification</li>
+                <li>Microsoft Office Certification</li>
+                <li>Windows OS Certification</li>
+                <li>CCA Certification</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Phone: <a href="https://wa.me/918509761068">+918509761068</a></p>
+            <p>Email: <a href="mailto:iemsayanghosh@gmail.com">iemsayanghosh@gmail.com</a></p>
+            <p>Follow me on:
+                <a href="https://www.facebook.com/SayanGhosh097/" target="_blank">
+                    <img class="social-icon" src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"> Facebook
+                </a>,
+                <a href="https://www.instagram.com/sayan_ghosh97/" target="_blank">
+                    <img class="social-icon" src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"> Instagram
+                </a>,
+                <a href="https://wa.me/918509761068" target="_blank">
+                    <img class="social-icon" src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"> WhatsApp
+                </a>,
+                <a href="https://www.linkedin.com/in/sayan-ghosh-515237322/" target="_blank">
+                    <img class="social-icon" src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"> LinkedIn
+                </a> <!-- Added LinkedIn link -->
+            </p>
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sayan Ghosh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Function to handle scroll animations
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible'); // Remove class when not in view
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

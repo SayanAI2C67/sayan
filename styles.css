@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    scroll-behavior: smooth; /* Smooth scrolling for links */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px; /* Spacing between logo and text */
+}
+
+h1 {
+    font-size: 2.5em; /* Adjust as needed */
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to grow and fill space */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px; /* Button-like padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+}
+
+/* Colorful background for links */
+nav a:nth-child(1) { background-color: #ff4081; }
+nav a:nth-child(2) { background-color: #3f51b5; }
+nav a:nth-child(3) { background-color: #4caf50; }
+nav a:nth-child(4) { background-color: #ff9800; }
+nav a:nth-child(5) { background-color: #2196f3; }
+nav a:nth-child(6) { background-color: #9c27b0; }
+
+nav a:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+h2 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.profile-pic {
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px; /* Rounded corners */
+    width: 150px; /* Profile pic size */
+    height: 150px; /* Ensure the height is the same as the width for a square shape */
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 30%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for projects */
+}
+
+.project img {
+    width: 100%; /* Responsive image */
+    border-radius: 8px;
+}
+
+.project:hover {
+    transform: translateY(-10px); /* Lift on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+}
+
+.social-icon {
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #ffffff;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4081;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button */
+}
+
+form button:hover {
+    background-color: #e91e63; /* Darker pink on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s; /* Transition for visibility */
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
